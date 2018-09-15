@@ -11,5 +11,14 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  mounted(){
+  	this.$nextTick(function() {
+			layui.use('layer');
+			layui.use('element');
+			layui.use('table');
+			layui.use('laypage');
+			layui.use('form');
+		});
+  }
 })
